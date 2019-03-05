@@ -99,4 +99,13 @@ public class IntArrayWorker
     }
   }
  
+  public int getCount(int n)
+  {
+      for (int i=0 ; i<matrix.length ; i++)
+        for int(int i=0; j<matrix[0].length ; j++)
+        {
+            matrix[i][j] ,n
+        }
+      return 1;
+  }
 }
