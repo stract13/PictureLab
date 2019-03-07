@@ -101,11 +101,41 @@ public class IntArrayWorker
  
   public int getCount(int n)
   {
-      for (int i=0 ; i<matrix.length ; i++)
-        for int(int i=0; j<matrix[0].length ; j++)
+      int count=0;
+      for (int[] row: matrix)
+      {
+        for (int pixel: row)
         {
-            matrix[i][j] ,n
+            if (pixel==n)
+            count++;
         }
-      return 1;
+      }
+      return count;
   }
+  
+  public int getLargest(int n)
+  {
+     int largest=0;
+     for (int[] row: matrix)
+     {
+         for (int pixel:row)
+         {
+             if (largest < pixel)
+             pixel = largest;
+         }
+     }
+     return largest;
+  }
+  
+  public int getColTotal(int n)
+  {
+      int ColTotal = 0;
+      for (int[] row: matrix)
+      {
+          ColTotal += row[n];
+      }
+      return ColTotal;
+  }
+   
 }
+
