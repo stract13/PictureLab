@@ -98,6 +98,19 @@ public class Picture extends SimplePicture
     }
   }  // End zeroBlue
   
+    public void keepOnlyBlue()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels)
+    {
+      for (Pixel pixelObj : rowArray)
+      {
+        pixelObj.setRed(0);
+        pixelObj.setGreen(0);
+      }
+    }
+  }
+  
   public void zeroRed()
   {
       Pixel[][] image = this.getPixels2D();
@@ -107,12 +120,6 @@ public class Picture extends SimplePicture
             int red = p.getRed();
             p.setRed(0);
         }
-  }
-  
-  public void keepOnlyBlue()
-  {
-      zeroRed();
-      zeroGreen();
   }
   
   public void zeroGreen()
@@ -144,6 +151,7 @@ public class Picture extends SimplePicture
       }
     } 
   }
+  
   
   /** Mirror just part of a picture of a temple */
   public void mirrorTemple()
