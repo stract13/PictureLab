@@ -42,6 +42,20 @@ public class PictureTester
     caterpillar.explore();
   }  
   
+    public static void testmirrorHorizontal()
+  {
+    Picture redmotorcyle = new Picture("redMotorcycle.jpg");
+    redmotorcyle.explore();
+    redmotorcyle.mirrorHorizontal();
+    redmotorcyle.explore();
+  }
+      public static void testHorizontalBotToTop()
+  {
+    Picture redmotorcyle = new Picture("redMotorcycle.jpg");
+    redmotorcyle.explore();
+    redmotorcyle.mirrorHorizontal();
+    redmotorcyle.explore();
+  }
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -50,6 +64,7 @@ public class PictureTester
     temple.mirrorTemple();
     temple.explore();
   }
+  
   
   /** Method to test the collage method */
   public static void testCollage()
